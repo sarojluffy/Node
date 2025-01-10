@@ -109,6 +109,8 @@ require("./models/MovieModal"); // goes the the moviemodal file and runs the cod
 const app = express();
 // console.log(process.env.mongo_connect);
 
+app.use(express.json()); //middleware for body , body meaning the date we sent in payload in postman
+
 const MongoConn = process.env.mongo_connect; //whole application ko PROCESS ko ENV file ma vako KEY access done
 mongoose
   .connect(MongoConn, {})
@@ -117,11 +119,11 @@ mongoose
   })
   .catch((err) => {
     console.log("conn faile mongoose");
-  });
+  }); // we are using the altyernative of Promise(async,await) here which is then and catch , cause this is not wrapped with a function where we can use async , as a result we cannot use the await as well
 
 app.get("/", IndexHandler); // indexhandler imported
-app.post("/data", Createhandler);
 app.get("/data", ReadHandler);
+app.post("/data", Createhandler);
 app.patch("/data", Updatehandler);
 app.delete("/data", DeleteHandler);
 
