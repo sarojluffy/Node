@@ -88,7 +88,7 @@ const Createhandler = async (req, res) => {
   const { name, info, image, rating } = req.body;
   let createddata; // created a variqable  as it is local scoped inside the try block
   try {
-    let createddata = await MoviesModel.create({
+    createddata = await MoviesModel.create({
       //
       name,
       info: info,
