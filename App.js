@@ -105,7 +105,7 @@ const ReadHandler = require("./Controllers/ReadHandler");
 const Createhandler = require("./Controllers/Createhandler");
 const Updatehandler = require("./Controllers/Updatehandler");
 const DeleteHandler = require("./Controllers/DeleteHandler");
-require("./models/MovieModal"); // goes the the moviemodal file and runs the code where one of them creates the modal/collection
+require("./models/MovieModal"); // goes the the moviemodal file and runs the code where one of them creates the modal/collection /import model
 const app = express();
 // console.log(process.env.mongo_connect);
 
