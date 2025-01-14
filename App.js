@@ -109,7 +109,7 @@ require("./models/MovieModal"); // goes the the moviemodal file and runs the cod
 const app = express();
 // console.log(process.env.mongo_connect);
 
-app.use(express.json()); //middleware for body , body meaning the date we sent in payload in postman
+app.use(express.json()); //middleware for body , body meaning the data we sent in payload in postman
 
 const MongoConn = process.env.mongo_connect; //whole application ko PROCESS ko ENV file ma vako KEY access done
 mongoose
