@@ -21,7 +21,7 @@ const Updatehandler = async (req, res) => {
       //accept two parameters generally , one is a object that identifies which one, another object represents the data to be modified
       { _id: id },
       { rating: rating, info: info }, //datas to be updated
-      { runValidators: true } // this runs he validator from the model file
+      { runValidators: true } // this runs he validator from the model file , in update (patch) we need this
     ); //updatee one updates one data, takes two objects as params , the first object is the identifier while the other one is the updating value
     res.status(200).json({
       message: "successupdate",
