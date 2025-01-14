@@ -46,4 +46,4 @@ const Dataschema = new mongoose.Schema({
 
 const DataModel = mongoose.model("YourModelname", Dataschema); //create a Model/collection
 
-module.exports = Dataschema;// export YourModelname here , dataschema is wrong
+module.exports = Dataschema;// export DataModel here , dataschema is wrong
